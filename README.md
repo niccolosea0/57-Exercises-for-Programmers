@@ -31,7 +31,6 @@ The goal of this repository is to:
 | 03       | Printing Quotes                   | ✅ Done   |
 | ...      | ...                               | ⏳ In Progress |
 
-(*Update this table as you complete more exercises!*)
 
 ## 📖 License
 
