@@ -29,7 +29,11 @@ The goal of this repository is to:
 | 01       | Saying Hello                      | ✅ Done   |
 | 02       | Counting the Number of Characters | ✅ Done   |
 | 03       | Printing Quotes                   | ✅ Done   |
-| ...      | ...                               | ⏳ In Progress |
+| 04       | Mad Lib                           | ✅ Done   |
+| 05       | Simple Math                       | ✅ Done   |
+| 06       | Retirment Calculator              | ✅ Done   |
+| 07       | Area of a rectangular Room        | ✅ Done   |
+| 08       | Pizza Party                       | ⏳ In Progress |
 
 
 ## 📖 License
