@@ -33,7 +33,8 @@ The goal of this repository is to:
 | 05       | Simple Math                       | ✅ Done   |
 | 06       | Retirment Calculator              | ✅ Done   |
 | 07       | Area of a rectangular Room        | ✅ Done   |
-| 08       | Pizza Party                       | ⏳ In Progress |
+| 08       | Pizza Party                       | ✅ Done   |
+| 09       | Paint Calculator                  | ⏳ In Progress |
 
 
 ## 📖 License
