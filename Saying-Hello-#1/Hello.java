@@ -18,16 +18,21 @@ public class Hello {
     public static void main(String[] args) {
 
                // Using scanner to get input
-               Scanner scanner = new Scanner(System.in);
+                Scanner scanner = new Scanner(System.in);
                
                // Print message
-               System.out.print("What is your name? ");
+               // System.out.print("What is your name? ");
 
                // Prompt user for name
-               String name = scanner.nextLine();
+               // String name = scanner.nextLine();
 
                // Print final message
-               System.out.println("Hello, " + name + ", nice to meet you!");
+               // System.out.println("Hello, " + name + ", nice to meet you!");
+
+
+               // Challenge1: Write a new version of the program without using any variables.
+               System.out.print("What is your name? ");
+               System.out.println("It is very nice to meet you " + scanner.nextLine() + ", Happy New Year's Eve!'");
                
     }
 
