@@ -31,8 +31,25 @@ public class Hello {
 
 
                // Challenge1: Write a new version of the program without using any variables.
-               System.out.print("What is your name? ");
-               System.out.println("It is very nice to meet you " + scanner.nextLine() + ", Happy New Year's Eve!'");
+               // System.out.print("What is your name? ");
+               // System.out.println("It is very nice to meet you " + scanner.nextLine() + ", Happy New Year's Eve!'");
+
+               // Challenge2: Write a version of the program that displays different greetings for different people.
+               System.out.println("What is your name? ");
+               String name = scanner.nextLine();
+
+               switch(name) {
+
+                   case "Nikoloz":
+                        System.out.print("Hello, " + name + ", what a good name!");
+
+                   case "John": 
+                        System.out.print("Woww, hello Mr." + name + ", nice to meet you.");
+
+                   default:
+                        System.out.print("Hi " + name + ", I am pleased to see you!");
+
+               }
                
     }
 
