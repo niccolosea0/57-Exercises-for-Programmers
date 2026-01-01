@@ -2,11 +2,11 @@
 
 This repository contains my personal solutions to the exercises in the book **"57 Exercises for Programmers"** by **Brian P. Hogan**.
 
-## 📘 About the Book
+## About the Book
 
 _"57 Exercises for Programmers"_ is a hands-on book that helps developers improve their programming skills by solving practical problems in a chosen programming language. The exercises cover topics like string manipulation, working with numbers, files, data structures, and more.
 
-## 🚀 Purpose of This Repository
+## Purpose of This Repository
 
 The goal of this repository is to:
 - Practice and improve my programming skills.
@@ -14,15 +14,15 @@ The goal of this repository is to:
 - Share my solutions with others who are also working through the same book.
 - Explore different ways to solve the same problem using clean, efficient, and readable code.
 
-## 🛠️ Technologies Used
+## Technologies Used
 
 > I am solving the exercises in:
-- Language: `Python`
-- Editor: PyCharm
-- OS: Windows
+- Language: `Python`, `Java`
+- Editor: VIM
+- OS: Linux Debian
 
 
-## ✅ Progress Tracker
+## Progress Tracker
 
 | Exercise | Title                             | Status   |
 |----------|-----------------------------------|----------|
@@ -37,14 +37,14 @@ The goal of this repository is to:
 | 09       | Paint Calculator                  | ⏳ In Progress |
 
 
-## 📖 License
+## License
 
 This project is for educational purposes. All code is written by me as part of my learning journey. The original exercises are from the book *"57 Exercises for Programmers"* by Brian P. Hogan (Pragmatic Bookshelf).
 
 ---
 
-### 📌 Note
+### Note
 
 If you’re also working through this book, feel free to fork this repository and share your own solutions!
 
-Happy coding! 🚀
+Happy coding! 
