@@ -39,8 +39,12 @@ public class Characters {
         Scanner scanner = new Scanner(System.in);
 
         // Prompt user for input
-        System.out.print("What is the input string? ");
-        String userInput = scanner.nextLine();
+        String userInput = "";
+
+        while(userInput.length() == 0) {
+            System.out.print("What is the input string? ");
+            userInput = scanner.nextLine();
+        }
 
         // Calculate size of the input
         int inputLength = userInput.length();
