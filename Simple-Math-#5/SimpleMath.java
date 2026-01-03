@@ -33,14 +33,37 @@
 
          Scanner scanner = new Scanner(System.in);
 
-         System.out.print("What is the first number? ");
-         String firstNumber = scanner.nextLine();
+         boolean isTrue = false;
 
-         System.out.print("What is the second number? ");
-         String secondNumber = scanner.nextLine();
+         String firstNumber = "";
+         String secondNumber = "";
+         int firstNum = 0;
+         int secondNum = 0;
 
-         int firstNum = Integer.parseInt(firstNumber); 
-         int secondNum = Integer.parseInt(secondNumber);
+         while (true) {
+
+            System.out.print("What is the first number? ");
+            firstNumber = scanner.nextLine();
+            try {
+                firstNum = Integer.parseInt(firstNumber);
+            } catch (Exception e) {
+               System.out.println("Enter a number!");
+               continue;
+            }
+
+            System.out.print("What is the second number? ");
+            secondNumber = scanner.nextLine();
+            try {
+                secondNum = Integer.parseInt(secondNumber);
+            } catch (Exception e) {
+                System.out.println("Enter a number!");
+                continue;
+            }
+
+            break;
+
+         }
+
 
          System.out.println(firstNum + " + " + secondNum + " = " + (firstNum + secondNum));
          System.out.println(firstNum + " - " + secondNum + " = " + (firstNum - secondNum));
