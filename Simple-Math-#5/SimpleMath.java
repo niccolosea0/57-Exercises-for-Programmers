@@ -74,12 +74,28 @@
 
          }
 
-
-         System.out.println(firstNum + " + " + secondNum + " = " + (firstNum + secondNum));
-         System.out.println(firstNum + " - " + secondNum + " = " + (firstNum - secondNum));
-         System.out.println(firstNum + " * " + secondNum + " = " + (firstNum * secondNum));
-         System.out.println(firstNum + " / " + secondNum + " = " + (firstNum / secondNum));
+         sum(firstNum, secondNum);
+         substract(firstNum, secondNum);
+         multiply(firstNum, secondNum);
+         divide(firstNum, secondNum);
 
 
      }
+
+     public static void sum(int x, int y) {
+         System.out.println(x + " + " + y + " = " + (x + y));
+     }
+     public static void substract(int x, int y) {
+         System.out.println(x + " - " + y + " = " + (x - y));
+     }
+     public static void multiply(int x, int y) {
+         System.out.println(x + " * " + y + " = " + (x * y));
+     }
+     public static void divide(int x, int y) {
+         System.out.println(x + " / " + y + " = " + (x / y));
+     }
+
+
+
+
 }
