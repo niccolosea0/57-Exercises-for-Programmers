@@ -50,6 +50,10 @@
                System.out.println("Enter a number!");
                continue;
             }
+            if (firstNum < 0) {
+                System.out.println("Number must be Positve!");
+                continue;
+            }
 
             System.out.print("What is the second number? ");
             secondNumber = scanner.nextLine();
@@ -59,6 +63,12 @@
                 System.out.println("Enter a number!");
                 continue;
             }
+
+            if (secondNum < 0) {
+                System.out.println("Number must be Positve!");
+                continue;
+            }
+
 
             break;
 
