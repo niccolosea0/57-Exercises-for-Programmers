@@ -32,13 +32,31 @@ public class RetirementCalculator {
 
         Scanner scanner = new Scanner(System.in);
 
-        System.out.print("What is your current age? ");
-        int currentAge = scanner.nextInt();
+        int currentAge = 0;
+        int retirementAge = 0;
+        int yearsLeftRetire = 0;
 
-        System.out.print("At what age would you like to retire? ");
-        int retirementAge = scanner.nextInt();
+        boolean keepGoint = true;
 
-        int yearsLeftRetire = retirementAge - currentAge;
+            while (true) {
+    
+                try {
+                    System.out.print("What is your current age? ");
+                    currentAge = scanner.nextInt();
+    
+                    System.out.print("At what age would you like to retire? ");
+                    retirementAge = scanner.nextInt();
+    
+                    yearsLeftRetire = retirementAge - currentAge;
+                } catch(Exception e) {
+                    System.out.println("Input must be numeric!");
+                    scanner.next();
+                    continue;
+                }
+
+                break;
+            }
+
         if (yearsLeftRetire == 1) {
             System.out.println("You have " + yearsLeftRetire +  " year left untill you can retire.");
         }
