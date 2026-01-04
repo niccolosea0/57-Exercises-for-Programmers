@@ -45,6 +45,10 @@ public class RetirementCalculator {
         else if (yearsLeftRetire > 1) {
             System.out.println("You have " + yearsLeftRetire +  " years left untill you can retire.");
         }
+        else {
+            System.out.println("You should be already retired my dear!");
+            System.exit(1);
+        }
 
         
         int currentYear = Year.now().getValue();
