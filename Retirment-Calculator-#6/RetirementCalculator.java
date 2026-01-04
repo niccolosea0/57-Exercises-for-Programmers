@@ -39,7 +39,13 @@ public class RetirementCalculator {
         int retirementAge = scanner.nextInt();
 
         int yearsLeftRetire = retirementAge - currentAge;
-        System.out.println("You have " + yearsLeftRetire +  " years left untill you can retire.");
+        if (yearsLeftRetire == 1) {
+            System.out.println("You have " + yearsLeftRetire +  " year left untill you can retire.");
+        }
+        else if (yearsLeftRetire > 1) {
+            System.out.println("You have " + yearsLeftRetire +  " years left untill you can retire.");
+        }
+
         
         int currentYear = Year.now().getValue();
         int retirementYear = currentYear + yearsLeftRetire;
