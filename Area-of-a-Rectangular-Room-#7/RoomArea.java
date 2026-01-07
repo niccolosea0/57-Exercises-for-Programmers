@@ -34,14 +34,26 @@ public class RoomArea {
     public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);
+        int roomLength = 0;
+        int roomWidth = 0;
 
         // Get room length
-        System.out.print("What is the length of the room in feet? ");
-        int roomLength = scanner.nextInt();
+        while (true) {
+            System.out.print("What is the length of the room in feet? ");
+            try {
+                roomLength = scanner.nextInt();
 
-        // Get room width
-        System.out.print("What is the width of the room in feet? ");
-        int roomWidth = scanner.nextInt();
+                // Get room width
+                System.out.print("What is the width of the room in feet? ");
+                roomWidth = scanner.nextInt();
+            } catch (Exception E) {
+                System.out.println("Invalid Input! Please Enter Numeric Values!");
+                scanner.next(); // Clear invalid input
+                continue;
+            }
+
+            break;
+        }
 
         System.out.println("You entered dimensions of " + roomLength + " feet by " + roomWidth + " feet." );
 
