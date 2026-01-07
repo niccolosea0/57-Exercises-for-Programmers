@@ -30,21 +30,42 @@ import java.util.Scanner;
 public class RoomArea {
 
     private static final double METERS_IN_FEET = 0.09290304;
+    private static Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
 
-        Scanner scanner = new Scanner(System.in);
         int roomLength = 0;
         int roomWidth = 0;
 
+        System.out.print("Would you like to calculate area in meters or feet? ");
+        String userInput = scanner.nextLine();
+        String decision = "";
+        switch(userInput.toLowerCase()) {
+            case "meters": 
+            case "meter":
+            case "m": 
+                decision = "meter"; 
+                break;
+            case "feets": 
+            case "feet":
+            case "f" : 
+                decision = "feet"; 
+                break;
+            default: 
+               System.out.println("Invalid input");
+               System.exit(1);
+        }
+
+        System.out.println(decision);
+
         // Get room length
         while (true) {
-            System.out.print("What is the length of the room in feet? ");
+            System.out.print("What is the length of the room in " + decision + "? ");
             try {
                 roomLength = scanner.nextInt();
 
                 // Get room width
-                System.out.print("What is the width of the room in feet? ");
+                System.out.print("What is the width of the room in " + decision + "? ");
                 roomWidth = scanner.nextInt();
             } catch (Exception E) {
                 System.out.println("Invalid Input! Please Enter Numeric Values!");
@@ -57,13 +78,12 @@ public class RoomArea {
 
         System.out.println("You entered dimensions of " + roomLength + " feet by " + roomWidth + " feet." );
 
-        // Calculate areas
-        int areaInFeet = roomLength * roomWidth;
-        double areaInMeters = areaInFeet * METERS_IN_FEET;
+
+        // Calculate area
+        int area = roomWidth * roomLength;
 
         // Print areas        
         System.out.println("The area is");
-        System.out.println(areaInFeet + " square feet");
-        System.out.format("%.3f square meters\n", areaInMeters);  
+        System.out.println(area + " square " + decision);
     }
 }
