@@ -37,18 +37,21 @@ public class PizzaParty {
         int pizzaNum = getNumber("How many pizzas do you have?");
 
         System.out.println("\nEach pizza has 8 slices");
+
         int totalSlices = pizzaNum * 8;
         int slicesPerPerson = totalSlices / peopleNum;
+        if (slicesPerPerson == 0) {
+            System.out.println("Wow, you better find some money, otherwise people will die from hunger!");
+            System.exit(-1);
+        }
 
         int leftOvers = totalSlices - (slicesPerPerson * peopleNum);
 
-        System.out.println(peopleNum + " people with " + pizzaNum + " pizzas");
-
-        System.out.println("\nEach person gets " + slicesPerPerson + " pieces of pizza.");
-        System.out.println("There are " + leftOvers + " leftover pieces.");
-
+        printInfo(peopleNum, pizzaNum, slicesPerPerson, leftOvers);
 
     }
+
+
 
     public static int getNumber(String prompt) {
 
@@ -61,6 +64,30 @@ public class PizzaParty {
         }
 
         return scanner.nextInt();
+    }
+
+    public static void printInfo(int peopleNum, int pizzaNum, int slicesPerPerson, int leftOvers) {
+
+        if (pizzaNum == 1) {
+            System.out.println(peopleNum + " people with " + pizzaNum + " pizza");
+        } else if (pizzaNum > 1) {
+            System.out.println(peopleNum + " people with " + pizzaNum + " pizzas");
+        }
+
+        if (slicesPerPerson == 1) {
+            System.out.println("\nEach person gets " + slicesPerPerson + " piece of pizza.");
+        } else if (slicesPerPerson > 1) {
+            System.out.println("\nEach person gets " + slicesPerPerson + " pieces of pizza.");
+        }
+
+        if (leftOvers == 1) {
+            System.out.println("There are " + leftOvers + " leftover pieces.");
+        } else if (leftOvers > 1) {
+            System.out.println("There are " + leftOvers + " leftover pieces.");
+        } else {
+            System.out.println("There are no leftovers");
+        }
+
     }
 
 }
