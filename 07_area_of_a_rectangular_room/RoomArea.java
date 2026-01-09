@@ -34,9 +34,6 @@ public class RoomArea {
 
     public static void main(String[] args) {
 
-        int roomLength = 0;
-        int roomWidth = 0;
-
         System.out.print("Would you like to calculate area in meters or feet? ");
         String userInput = scanner.nextLine();
         String decision = "";
@@ -58,26 +55,11 @@ public class RoomArea {
 
         System.out.println(decision);
 
-        // Get room length
-        while (true) {
-            System.out.print("What is the length of the room in " + decision + "? ");
-            try {
-                roomLength = scanner.nextInt();
+        // Get room width and length
+        int roomLength = getNumber("What is the length of the room in " + decision + "? ");
+        int roomWidth = getNumber("What is the width of the room in " + decision + "? ");
 
-                // Get room width
-                System.out.print("What is the width of the room in " + decision + "? ");
-                roomWidth = scanner.nextInt();
-            } catch (Exception E) {
-                System.out.println("Invalid Input! Please Enter Numeric Values!");
-                scanner.next(); // Clear invalid input
-                continue;
-            }
-
-            break;
-        }
-
-        System.out.println("You entered dimensions of " + roomLength + " feet by " + roomWidth + " feet." );
-
+        System.out.println("You entered dimensions of " + roomLength + " " + decision + " by " + roomWidth + " " + decision);
 
         // Calculate area
         int area = roomWidth * roomLength;
@@ -85,5 +67,16 @@ public class RoomArea {
         // Print areas        
         System.out.println("The area is");
         System.out.println(area + " square " + decision);
+    }
+
+    public static int getNumber(String prompt) {
+
+        System.out.print(prompt);
+        while (!scanner.hasNextInt()) {
+            scanner.next();
+            System.out.print(prompt);
+        }
+
+        return scanner.nextInt();
     }
 }
