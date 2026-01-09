@@ -29,57 +29,33 @@
  import java.util.Scanner;
 
  public class SimpleMath {
+
+     public static Scanner scanner = new Scanner(System.in);
+
      public static void main(String[] args) {
 
-         Scanner scanner = new Scanner(System.in);
 
-         boolean isTrue = false;
+         // Get numbers
+         int firstNum = getNumber("What is the first number? ");
+         int secondNum = getNumber("What is the second number? ");
 
-         String firstNumber = "";
-         String secondNumber = "";
-         int firstNum = 0;
-         int secondNum = 0;
-
-         while (true) {
-
-            System.out.print("What is the first number? ");
-            firstNumber = scanner.nextLine();
-            try {
-                firstNum = Integer.parseInt(firstNumber);
-            } catch (Exception e) {
-               System.out.println("Enter a number!");
-               continue;
-            }
-            if (firstNum < 0) {
-                System.out.println("Number must be Positve!");
-                continue;
-            }
-
-            System.out.print("What is the second number? ");
-            secondNumber = scanner.nextLine();
-            try {
-                secondNum = Integer.parseInt(secondNumber);
-            } catch (Exception e) {
-                System.out.println("Enter a number!");
-                continue;
-            }
-
-            if (secondNum < 0) {
-                System.out.println("Number must be Positve!");
-                continue;
-            }
-
-
-            break;
-
-         }
-
+         // Output results
          sum(firstNum, secondNum);
          substract(firstNum, secondNum);
          multiply(firstNum, secondNum);
          divide(firstNum, secondNum);
 
+     }
 
+     // Method that prompts user for valid number and then returns it
+     public static int getNumber(String prompt) {
+         System.out.print(prompt);
+         while(!scanner.hasNextInt()) {
+             scanner.next();
+             System.out.print(prompt);
+         }
+
+         return scanner.nextInt();
      }
 
      public static void sum(int x, int y) {
