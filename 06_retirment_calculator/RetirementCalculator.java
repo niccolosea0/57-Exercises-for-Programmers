@@ -28,35 +28,20 @@ import java.util.Scanner;
 import java.time.Year;
 
 public class RetirementCalculator {
+
+    public static Scanner scanner = new Scanner(System.in);
+
     public static void main(String[] args) {
 
-        Scanner scanner = new Scanner(System.in);
+        // Get user input
+        int currentAge = getNumber("What is your current age? ");
+        int retirementAge = getNumber("At what age would you like to retire? ");
 
-        int currentAge = 0;
-        int retirementAge = 0;
-        int yearsLeftRetire = 0;
+        // Calcualte years left to retire
+        int yearsLeftRetire = retirementAge - currentAge;
 
-        boolean keepGoint = true;
 
-            while (true) {
-    
-                try {
-                    System.out.print("What is your current age? ");
-                    currentAge = scanner.nextInt();
-    
-                    System.out.print("At what age would you like to retire? ");
-                    retirementAge = scanner.nextInt();
-    
-                    yearsLeftRetire = retirementAge - currentAge;
-                } catch(Exception e) {
-                    System.out.println("Input must be numeric!");
-                    scanner.next();
-                    continue;
-                }
-
-                break;
-            }
-
+        // Styling output
         if (yearsLeftRetire == 1) {
             System.out.println("You have " + yearsLeftRetire +  " year left untill you can retire.");
         }
@@ -65,14 +50,26 @@ public class RetirementCalculator {
         }
         else {
             System.out.println("You should be already retired my dear!");
-            System.exit(1);
+            System.exit(1); // If user provided numbers incorrectly!
         }
 
         
+        // Calculating years
         int currentYear = Year.now().getValue();
         int retirementYear = currentYear + yearsLeftRetire;
 
         System.out.println("It's " + currentYear + ", so you can retire in " + retirementYear);
          
     }
+
+    public static int getNumber(String prompt) {
+        System.out.print(prompt);
+        while (!scanner.hasNextInt()) {
+            scanner.next();
+            System.out.print(prompt);
+        }
+
+        return scanner.nextInt();
+    }
+
 }
