@@ -34,19 +34,28 @@ public class PaintCalculator {
 
     public static void main(String[] args) {
         
-        System.out.print("What is length of the room?  ");
-        int length = scanner.nextInt();
+        int length = getNumber("What is length of the room? ");
 
-        System.out.print("What is width of the room? ");
-        int width = scanner.nextInt();
+        int width = getNumber("What is width of the room? ");
 
         int roomArea = length * width;
         double gallonsNeeded = (double) roomArea / GALLON;
 
         double gallonsNeededRounded = Math.ceil(gallonsNeeded);
         System.out.println("You will need to purchase " + (int) gallonsNeededRounded + " gallons of paint to cover " + roomArea + " square feet.");
-        
          
+    }
+
+    private static int getNumber(String prompt) {
+        System.out.print(prompt);
+        while (!scanner.hasNextInt()) {
+            /* If inputed number is not integer, clean scanner 
+               and prompt user to enter number again */
+            scanner.next();
+            System.out.print(prompt);
+        }
+
+        return scanner.nextInt();
     }
 }
 
