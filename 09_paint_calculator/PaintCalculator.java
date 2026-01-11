@@ -28,12 +28,14 @@ import java.util.Scanner;
 public class PaintCalculator {
 
     private static Scanner scanner = new Scanner(System.in);
+    private static final double PI = 3.141592;
 
     // Amount of square feet one gallon covers
     private static final int GALLON = 360;
 
     public static void main(String[] args) {
         
+        /*
         int length = getNumber("What is length of the room? ");
 
         int width = getNumber("What is width of the room? ");
@@ -43,6 +45,18 @@ public class PaintCalculator {
 
         double gallonsNeededRounded = Math.ceil(gallonsNeeded);
         System.out.println("You will need to purchase " + (int) gallonsNeededRounded + " gallons of paint to cover " + roomArea + " square feet.");
+        */
+
+        // Implement support for a round room
+        int radius  = getNumber("What is the radius of the round room? ");
+
+        // Area of the round room
+        double roundRoomArea = PI * (radius * radius);
+
+        // Gallons needed for a round room
+        double gallonsNeeded = roundRoomArea / GALLON; 
+       
+        System.out.println("You will need to purchase " + (int) Math.ceil(gallonsNeeded) + " gallons of paint to cover " + Math.round(roundRoomArea) + " square feet.");
          
     }
 
