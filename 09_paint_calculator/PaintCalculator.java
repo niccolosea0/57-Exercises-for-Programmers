@@ -34,8 +34,39 @@ public class PaintCalculator {
     private static final int GALLON = 360;
 
     public static void main(String[] args) {
+
+        // Call method to print area of an originalroom
+        originalTask();
+
+        // Call method to seperate lines more or less pretty.
+        printSeperatorCharacters();
+
+        // Call method to calculate area of an round room
+        roundRoom();
         
-        /*
+        // Again seperator characters
+        printSeperatorCharacters();
+
+        // Call method to calculate area of an L-Shaped room
+        LShapedRoom();
+    }
+
+    private static int getNumber(String prompt) {
+        System.out.print(prompt);
+        while (!scanner.hasNextInt()) {
+            /* If inputed number is not integer, clean scanner 
+               and prompt user to enter number again */
+            scanner.next();
+            System.out.print(prompt);
+        }
+
+        return scanner.nextInt();
+    }
+
+    private static void originalTask() {
+        
+        System.out.println("\nLets calculate area for a normal room.\n");
+
         // ORIGINAL TASK, NO CHALLANGES
 
         int length = getNumber("What is length of the room? ");
@@ -47,9 +78,13 @@ public class PaintCalculator {
 
         double gallonsNeededRounded = Math.ceil(gallonsNeeded);
         System.out.println("You will need to purchase " + (int) gallonsNeededRounded + " gallons of paint to cover " + roomArea + " square feet.");
-        */
 
-        /*
+    }
+
+    private static void roundRoom() {
+
+        System.out.println("Lets calculate now for a round room.\n");
+
         // IMPLEMENT SUPPORT FOR A ROUND ROOM
 
         int radius  = getNumber("What is the radius of the round room? ");
@@ -61,8 +96,11 @@ public class PaintCalculator {
         double gallonsNeeded = roundRoomArea / GALLON; 
        
         System.out.println("You will need to purchase " + (int) Math.ceil(gallonsNeeded) + " gallons of paint to cover " + Math.round(roundRoomArea) + " square feet.");
-        */
+    }
 
+    private static void LShapedRoom() {
+
+        System.out.println("Lets calculate now for L-Shaped Room.\n");
         // IMPLEMENT SUPPORT FOR AN L-SHAPED ROOM
 
         /*In order to calculate area of the L-shaped room we need to divide it in 2 rectangles, like left and right rectangle
@@ -90,16 +128,14 @@ public class PaintCalculator {
 
     }
 
-    private static int getNumber(String prompt) {
-        System.out.print(prompt);
-        while (!scanner.hasNextInt()) {
-            /* If inputed number is not integer, clean scanner 
-               and prompt user to enter number again */
-            scanner.next();
-            System.out.print(prompt);
-        }
+    public static void printSeperatorCharacters() {
+        String repeatedCharacter = "=".repeat(50);
 
-        return scanner.nextInt();
+        // Print new line, the 2 lines of =, then new line again
+        System.out.println();
+        System.out.println(repeatedCharacter);
+        System.out.println(repeatedCharacter);
+        System.out.println();
     }
 }
 
