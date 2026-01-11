@@ -34,7 +34,8 @@ The goal of this repository is to:
 | 06       | Retirment Calculator              | ✅ Done   |
 | 07       | Area of a rectangular Room        | ✅ Done   |
 | 08       | Pizza Party                       | ✅ Done   |
-| 09       | Paint Calculator                  | ⏳ In Progress |
+| 09       | Paint Calculator                  | ✅ Done   |
+| 10       | Self Checkout                     | ⏳ In Progress |
 
 
 ## License
