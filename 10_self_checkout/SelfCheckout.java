@@ -8,36 +8,46 @@ public class SelfCheckout {
     public static void main(String[] args) {
         
         // First item
-        System.out.print("Enter price of the item 1: ");
-        double firstItemPrice = scanner.nextInt();
+        System.out.println();
 
-        System.out.print("Enter quantity of the item 1: ");
-        double firstItemQuantity = scanner.nextInt();
+        int firstItemPrice = getNumber("Enter price of the item 1: ");
+        int firstItemQuantity = getNumber("Enter quantity of the item 1: ");
+
 
         // Second item
-        System.out.print("Enter price of the item 2: ");
-        double secondItemPrice = scanner.nextInt();
+        System.out.println();
 
-        System.out.print("Enter quantity of the item 2: ");
-        double secondItemQuantity = scanner.nextInt();
+        int secondItemPrice = getNumber("Enter price of the item 2: ");
+        int secondItemQuantity = getNumber("Enter quantity of the item 2: ");
+
 
         // Third item
-        System.out.print("Enter price of the item 3: ");
-        double thirdItemPrice = scanner.nextInt();
+        System.out.println();
 
-        System.out.print("Enter quantity of the item 3: ");
-        double thirdItemQuantity = scanner.nextInt();
+        int thirdItemPrice = getNumber("Enter price of the item 3: ");
+        int thirdItemQuantity = getNumber("Enter quantity of the item 3: ");
 
-        
         // Calculate subtotal, tax, total
         double subTotal = (firstItemPrice * firstItemQuantity) + (secondItemPrice * secondItemQuantity) + (thirdItemPrice * thirdItemQuantity);
         double tax = subTotal * 5.5 / 100;
         double total = subTotal + tax;
 
-        System.out.printf("Subtotal: $%.2f\n", subTotal);
+        System.out.printf("\nSubtotal: $%.2f\n", subTotal);
         System.out.printf("Tax: $%.2f\n", tax);
         System.out.printf("Total: $%.2f\n", total);
 
+
+    }
+
+    // Get numeric value
+    private static int getNumber(String prompt) {
+        System.out.print(prompt);
+        while (!scanner.hasNextInt()) {
+            scanner.next();
+            System.out.print(prompt);
+        }
+
+        return scanner.nextInt();
     }
 
 }
