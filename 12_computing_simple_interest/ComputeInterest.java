@@ -12,8 +12,11 @@ public  class ComputeInterest {
 
             int amount = calculateSimpleInterest(principal, interestRate, years);
 
-            System.out.printf("After %d years at %.1f%%, the investment will be worth $%d\n", years, interestRate, amount);
+            System.out.printf("\nAfter %d years at %.1f%%, the investment will be worth $%d\n", years, interestRate, amount);
 
+            System.out.println();
+
+            calculateAmountEachYear(principal, interestRate, years);
          
     }
 
@@ -21,6 +24,13 @@ public  class ComputeInterest {
             return (int) (p * (1 + (r / 100 * y)));
     }
 
+    private static void calculateAmountEachYear(int principal, double rate, int years) {
+
+        for (int i = 1; i <= years; i++) {
+            int amount = (int) (principal * (1 + (rate / 100 * i)));
+            System.out.printf("Amount at the end of year %d is: $%d\n", i, amount);
+        }
+    }
 
     private static double getNumber(String prompt) {
         System.out.print(prompt);
