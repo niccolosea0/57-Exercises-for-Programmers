@@ -1,3 +1,5 @@
+    Exercise 12: Computing Simple Interest
+
     Computing simple interest is a great way to quickly figure
     out whether an investment has value. It’s also a good way
     to get comfortable with explicitly coding the order of operations in your programs.
