@@ -10,13 +10,13 @@ public class TaxCalculator {
     public static void main(String[] args) {
 
         double orderAmount = getNumber("What is the order amount? ");
-        String state = getString("What is the state? ");
+        String state = getString("What is the state? ").toLowerCase();
 
-        if (state.equals("WI")) {
+        if (state.equals("wi")) {
             double tax = orderAmount * 5.5 / 100;
             System.out.printf("The subtotal is $%.2f\n", orderAmount);
-            System.out.println("The tax is $" + tax);
-            System.out.println("THe total is $" + (orderAmount + tax));
+            System.out.printf("The tax is $%.2f\n", tax);
+            System.out.printf("The total is $%.2f\n", (orderAmount + tax));
         }
 
         // I do not use else, because task constraints mention not to use!
