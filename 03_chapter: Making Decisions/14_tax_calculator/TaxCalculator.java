@@ -12,7 +12,7 @@ public class TaxCalculator {
         double orderAmount = getNumber("What is the order amount? ");
         String state = getString("What is the state? ").toLowerCase();
 
-        if (state.equals("wi")) {
+        if (state.equals("wi") || state.equals("wisconsin")) {
             double tax = orderAmount * 5.5 / 100;
             System.out.printf("The subtotal is $%.2f\n", orderAmount);
             System.out.printf("The tax is $%.2f\n", tax);
