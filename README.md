@@ -39,7 +39,7 @@ The goal of this repository is to:
 | 11       | Currency Conversion                   | ✅ Done|
 | 12       | Computing Simple Interest                  | ✅ Done|
 | 13       | Determining Compound Interest                    | ✅ Done|
-| 14       | Tax Calculator                   | ⏳ In Progress |
+| 14       | Tax Calculator                   | ✅ Done|
 
 
 ## License
