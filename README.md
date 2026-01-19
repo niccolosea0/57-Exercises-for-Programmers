@@ -38,7 +38,7 @@ The goal of this repository is to:
 | 10       | Self Checkout                     | ✅ Done|
 | 11       | Currency Conversion                   | ✅ Done|
 | 12       | Computing Simple Interest                  | ✅ Done|
-| 13       | Determining Compound Interest                    | ⏳ In Progress |
+| 13       | Determining Compound Interest                    | ✅ Done|
 | 14       | Tax Calculator                   | ⏳ In Progress |
 
 
