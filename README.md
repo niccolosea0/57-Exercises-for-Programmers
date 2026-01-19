@@ -35,11 +35,11 @@ The goal of this repository is to:
 | 07       | Area of a rectangular Room        | ✅ Done   |
 | 08       | Pizza Party                       | ✅ Done   |
 | 09       | Paint Calculator                  | ✅ Done   |
-| 10       | Self Checkout                     | ✅ Done|
-| 11       | Currency Conversion                   | ✅ Done|
-| 12       | Computing Simple Interest                  | ✅ Done|
-| 13       | Determining Compound Interest                    | ✅ Done|
-| 14       | Tax Calculator                   | ✅ Done|
+| 10       | Self Checkout                     | ✅ Done   |
+| 11       | Currency Conversion               | ✅ Done   |
+| 12       | Computing Simple Interest         | ✅ Done   |
+| 13       | Determining Compound Interest     | ✅ Done   |
+| 14       | Tax Calculator                    | ✅ Done   |
 
 
 ## License
