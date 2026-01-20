@@ -40,6 +40,8 @@ The goal of this repository is to:
 | 12       | Computing Simple Interest         | ✅ Done   |
 | 13       | Determining Compound Interest     | ✅ Done   |
 | 14       | Tax Calculator                    | ✅ Done   |
+| 15       | Password Validation               | In Progress   |
+
 
 
 ## License
