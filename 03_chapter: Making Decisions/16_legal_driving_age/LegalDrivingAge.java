@@ -10,6 +10,10 @@ public class LegalDrivingAge {
     public static void main(String[] args) {
 
         int age = getNumber("What is your age? ");
+        while (age < 0) {
+            System.out.println("Invalid input");
+            age = getNumber("What is your age? ");
+        }
         String result = (age > 15) ? "You are old enough to legally drive." : "You are not old enough to legally drive.";
         System.out.println(result);
     }
@@ -18,9 +22,11 @@ public class LegalDrivingAge {
         System.out.print(prompt);
         while (!scanner.hasNextInt()) {
             scanner.next();
+            System.out.println("Enter valid age");
             System.out.print(prompt);
         }
 
         return scanner.nextInt();
+
     }
 }
