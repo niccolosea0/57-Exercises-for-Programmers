@@ -1,4 +1,6 @@
 import java.util.Scanner;
+import java.util.Map;
+import java.util.HashMap;
 
 public class BloodAlcoholCalculator {
 
@@ -7,6 +9,22 @@ public class BloodAlcoholCalculator {
     private static final double FEMALE_RATIO = 0.66;
 
     public static void main(String[] args) {
+
+        Map<String, Double> stateLimits = new HashMap<>();
+        stateLimits.put("CA", 0.08);
+        stateLimits.put("NY", 0.08);
+        stateLimits.put("TX", 0.08);
+        stateLimits.put("UT", 0.05);
+
+        System.out.println("Enter state (e.g. CA, NY, UT): ");
+        String state = scanner.nextLine().trim().toUpperCase();
+
+        if (!stateLimits.containsKey(state)) {
+            System.out.println("State not found.");
+            return;
+        }
+
+        double legalLimit = stateLimits.get(state);
 
         double w = getNumber("Enter your weight: ");
         scanner.nextLine();
@@ -24,10 +42,11 @@ public class BloodAlcoholCalculator {
 
         double BAC = (a * 5.14 / (w * ratio)) - (0.015 * h);
         System.out.printf("Your BAC is %.2f\n", BAC);
-        if (BAC < 0.08) {
-            System.out.println("It is legal for you to drive!");
+
+        if (BAC < legalLimit) {
+            System.out.println("It is legal for you to drive in " + state);
         } else {
-            System.out.println("It is NOT legal for you to drive!!!");
+            System.out.println("It is NOT legal for you to drive in " + state);
         }
 
          
