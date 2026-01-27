@@ -22,11 +22,13 @@ public class TemperatureConverter {
     }
 
     private static int toCelsius(int f) {
-        return (int) ((f - 32) * (5/9.));
+        double temp = (f - 32) * (5/9.);
+        return (int) Math.round(temp);
     }
 
     private static int toFahrenheit(int c) {
-        return (int) (c * 9/5.) + 32;
+        double temp = (c * 9/5.) + 32;
+        return (int) Math.round(temp);
     }
 
     private static String getChoice(String prompt) {
