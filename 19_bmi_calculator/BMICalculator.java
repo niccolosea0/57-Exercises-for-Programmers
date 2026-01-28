@@ -6,17 +6,32 @@ public class BMICalculator {
     
     public static void main(String[] args) {
 
-        double weight = getNumber("Enter your weight in pounds: ");
-        double height = getNumber("Enter your height in inches: ");
 
-        double bmi = calculateBMI(weight, height);
+        String userInput = askForUnits();
+
+        double weight = getNumber("Enter your weight: ");
+        double height = getNumber("Enter your height: ");
+
+        double bmi = 0;
+
+        if (userInput.equals("m")) {
+            bmi = calculateMetricBMI(weight, height);
+        } else if (userInput.equals("us")) {
+            bmi = calculateUsBMI(weight, height);
+        } 
+        
         System.out.printf("Your BMI is %.1f\n", bmi);
 
         checkBMI(bmi);
     }
     
-    private static double calculateBMI(double weight, double height) {
+    private static double calculateUsBMI(double weight, double height) {
         double bmi = (weight / (height * height)) * 703;
+        return bmi;
+    }
+
+    private static double calculateMetricBMI(double weight, double height) {
+        double bmi = (weight / (height * height)) ;
         return bmi;
     }
 
@@ -33,11 +48,34 @@ public class BMICalculator {
     private static double getNumber(String prompt) {
         System.out.print(prompt);
         while (!scanner.hasNextDouble()) {
+
+
+
+
             scanner.next();
             System.out.print(prompt);
         }
 
         return scanner.nextDouble();
     }
-    
+
+    private static String askForUnits() {
+        System.out.print("Would you like to calculate in Metric or US units (enter m/metric or us)? ");
+        String userInput = scanner.nextLine().trim().toLowerCase();
+        
+        switch (userInput) {
+
+            case "m": case "metric":
+                userInput =  "m";
+                break;
+            case "us":
+                userInput =  "us";
+                break;
+            default:
+               System.out.println("You have entered unknown unit");
+               System.exit(1);
+        }
+
+        return userInput;
+    }
 }
