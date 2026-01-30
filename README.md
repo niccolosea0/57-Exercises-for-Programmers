@@ -43,7 +43,8 @@ The goal of this repository is to:
 | 15       | Password Validation               | ✅ Done   |
 | 16       | Legal Driving Age                 | ✅ Done   |
 | 17       | Blood Alcohol Calculator          | ✅ Done   |
-| 18       |Temperature Converter        | In Progress   |
+| 18       | Temperature Converter             | ✅ Done   |
+| 19       | BMI Calculator                    | In Progress   |
 
 
 
