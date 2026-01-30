@@ -42,7 +42,8 @@ The goal of this repository is to:
 | 14       | Tax Calculator                    | ✅ Done   |
 | 15       | Password Validation               | ✅ Done   |
 | 16       | Legal Driving Age                 | ✅ Done   |
-| 17       | Blood Alcohol Calculator          | In Progress   |
+| 17       | Blood Alcohol Calculator          | ✅ Done   |
+| 18       |Temperature Converter        | In Progress   |
 
 
 
