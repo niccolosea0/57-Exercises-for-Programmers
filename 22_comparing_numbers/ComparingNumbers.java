@@ -1,28 +1,26 @@
 import java.util.Scanner;
+import java.util.List;
+import java.util.ArrayList;
 
 public class ComparingNumbers {
 
     private static final Scanner scanner = new Scanner(System.in);
 
+    // Number that represents how many numbers do we want to enter
+    private static final int N = 10;
+
     public static void main(String[] args) {
 
-        int firstNumber = getNumber("Enter first number: "); 
-        int secondNumber = getNumber("Enter second number: "); 
+        // Get list of the entered numbers
+        List<Integer> numbersList = getListOfNumbers();
 
-        while (secondNumber == firstNumber) {
-            secondNumber = getNumber("You have entered that nubmer already, please enter another number: ");
-        }
+        // Get max number from the list
+        int maxNum = getMax(numbersList);
 
-        int thirdNumber = getNumber("Enter third number: "); 
-
-        while (thirdNumber == firstNumber || thirdNumber == secondNumber) {
-            thirdNumber = getNumber("you have entered that number already, please enter different number: ");
-        }
-
-        int max = findMax(firstNumber, secondNumber, thirdNumber);
-        System.out.println("The largest number is " + max);
+        System.out.println("The largest number is " + maxNum);
     }
 
+    // Method to enter number
     private static int getNumber(String prompt) {
         System.out.print(prompt);
         while (!scanner.hasNextInt()) {
@@ -33,16 +31,48 @@ public class ComparingNumbers {
         return scanner.nextInt();
     }
 
-    private static int findMax(int first, int second, int third) {
+    // Method to create a list of numbers
+    private static List<Integer> getListOfNumbers() {
 
-        int[] numbers = {first, second, third};
+        // Create a list and add first number to it
+        List<Integer> list = new ArrayList<>();
+        int firstNumber = getNumber("Enter number 1: ");
+        list.add(firstNumber);
 
-        int size = numbers.length;
+        
+        for (int i = 1; i < N; i++) {
+
+            // Enter number
+            int number = getNumber("Enter number " + (i + 1) + ": ");
+
+            // Loop to check, if entered number equals to any of the already entered number
+            for (int j = 0; j < i; j++) {
+
+                // While entered number equals to other nubmer, ask user to enter number again
+                while (number == list.get(j)) {
+                    number = getNumber("You have entered that nubmer already, please enter another number: ");
+                }
+            }
+
+            // Add entered number to the list
+            list.add(number);
+        }
+
+        // Return final list
+        return list;
+    }
+
+    // Method to find and return max number
+    private static int getMax(List<Integer> list) {
+
+        int size = list.size();
         int max = 0;
 
         for (int i = 0; i < size; i++) {
-            if (numbers[i] > max) {
-                max = numbers[i];
+            int number = list.get(i);
+
+            if (number > max) {
+                max = number;
             }
         }
 
