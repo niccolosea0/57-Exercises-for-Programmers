@@ -46,7 +46,8 @@ The goal of this repository is to:
 | 18       | Temperature Converter             | ✅ Done   |
 | 19       | BMI Calculator                    | ✅ Done   |
 | 20       | Multistate Sales Tax Calculator   | ✅ Done   |
-| 21       | Numbers to Names                  | In Progress   |
+| 21       | Numbers to Names                  | ✅ Done   |
+| 22       | Comparing Names                   | In Progress |
 
 
 
