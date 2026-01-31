@@ -8,11 +8,15 @@ public class ComparingNumbers {
 
         int firstNumber = getNumber("Enter first number: "); 
         int secondNumber = getNumber("Enter second number: "); 
+
+        while (secondNumber == firstNumber) {
+            secondNumber = getNumber("You have entered that nubmer already, please enter another number: ");
+        }
+
         int thirdNumber = getNumber("Enter third number: "); 
 
-        if (!checkNumbersEquality(firstNumber, secondNumber, thirdNumber)) {
-            System.out.println("Do not enter equal numbers!");
-            return;
+        while (thirdNumber == firstNumber || thirdNumber == secondNumber) {
+            thirdNumber = getNumber("you have entered that number already, please enter different number: ");
         }
 
         int max = findMax(firstNumber, secondNumber, thirdNumber);
@@ -27,17 +31,6 @@ public class ComparingNumbers {
         }
 
         return scanner.nextInt();
-    }
-
-    private static boolean checkNumbersEquality(int first, int second, int third) {
-        
-        boolean flag = false;
-
-        if (first != second && first != third && second != third) {
-            flag = true;
-        } 
-
-        return flag;
     }
 
     private static int findMax(int first, int second, int third) {
