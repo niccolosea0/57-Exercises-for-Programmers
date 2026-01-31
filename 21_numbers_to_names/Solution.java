@@ -1,4 +1,6 @@
 import java.util.Scanner;
+import java.util.Map;
+import java.util.HashMap;
 
 public class Solution {
 
@@ -7,63 +9,30 @@ public class Solution {
     public static void main(String[] args) {
 
         int number = getNumber("Please enter number of the month: ");
+
+        Map<Integer, String> monthMap = new HashMap<>();
+        monthMap.put(1, "January");
+        monthMap.put(2, "February");
+        monthMap.put(3, "March");
+        monthMap.put(4, "April");
+        monthMap.put(5, "May");
+        monthMap.put(6, "June");
+        monthMap.put(7, "July");
+        monthMap.put(8, "August");
+        monthMap.put(9, "September");
+        monthMap.put(10, "Octomber");
+        monthMap.put(11, "November");
+        monthMap.put(12, "December");
+
         String month = "";
-
-        switch (number) {
-
-            case 1: 
-                month = "January";
-                break;
-            case 2: 
-                month = "February";
-                break;
-
-            case 3: 
-                month = "March";
-                break;
-
-            case 4: 
-                month = "April";
-                break;
-
-            case 5: 
-                month = "May";
-                break;
-
-            case 6: 
-                month = "June";
-                break;
-
-            case 7: 
-                month = "July";
-                break;
-
-            case 8: 
-                month = "August";
-                break;
-
-            case 9: 
-                month = "September";
-                break;
-
-            case 10: 
-                month = "Octomber";
-                break;
-
-            case 11: 
-                month = "November";
-                break;
-
-            case 12: 
-                month = "December";
-                break;
-
-            default:
-                System.out.println("You have entered invalid number of Month!");
-                return;
-
+        if (monthMap.containsKey(number)) {
+            month = monthMap.get(number);
+        } else {
+            System.out.println("You have entered wrong number of month");
+            return;
         }
-            System.out.println("The name of the month is " + month);
+
+        System.out.println("The name of the month is " + month);
     }
 
     private static int getNumber(String prompt) {
