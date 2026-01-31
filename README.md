@@ -47,9 +47,8 @@ The goal of this repository is to:
 | 19       | BMI Calculator                    | ✅ Done   |
 | 20       | Multistate Sales Tax Calculator   | ✅ Done   |
 | 21       | Numbers to Names                  | ✅ Done   |
-| 22       | Comparing Names                   | In Progress |
-
-
+| 22       | Comparing Names                   | ✅ Done   |
+| 23       | Troubleshooting Car Issues        | In Progress |
 
 
 ## License
