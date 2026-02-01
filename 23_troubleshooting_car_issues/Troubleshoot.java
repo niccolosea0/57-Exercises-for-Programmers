@@ -12,31 +12,55 @@ public class Troubleshoot {
         String input = getAnswer("Is the car silent when you turn the key? ");
         if (input.equals("y")) {
             leftSide();
-        } else if (input.equals("n") {
-
-
+        } else {
+            rightSide();
         }
-
-
-
-        
     }
 
     public static void leftSide() {
         String input = getAnswer("Are the battery terminals corroded? ");
         if (input.equals("y")) {
               System.out.println("Clean terminals and try starting again");
-        } else if (input.equals("n")) {
+        } else {
               System.out.println("Replace cables and try again");
         }
     }
 
-    public static void firstRightSide() {
+    public static void rightSide() {
         String input = getAnswer("Does the car make a clicking noise? ");
-        if(input.equals("y") {
+        if (input.equals("y")) {
             System.out.println("Replace the battery");
+        } else {
+            secondRightSide();
         }
+    }
 
+    public static void secondRightSide() {
+        String input = getAnswer("Does the car crank up but fail to start? ");
+        if (input.equals("y")) {
+            System.out.println("Check spark plug connections");
+        } else {
+            thirdRightSide();
+        }
+    }
+
+    public static void thirdRightSide() {
+        String input = getAnswer("Does the engine start and then die? ");
+        if (input.equals("y")) {
+            fourthRightSide();
+        } else {
+            System.out.println("Wow, even I can not help you then!");
+        }
+    }
+
+    public static void fourthRightSide() {
+        String input = getAnswer("Does your car have fuel injection? ");
+            if (input.equals("y")) {
+                System.out.println("Get it in ofr service");
+            } else {
+                System.out.println("Check to ensure the choke is opening and closing");
+            }
+        }
 
     public static String getString(String prompt) {
         System.out.print(prompt);
