@@ -48,7 +48,9 @@ The goal of this repository is to:
 | 20       | Multistate Sales Tax Calculator   | ✅ Done   |
 | 21       | Numbers to Names                  | ✅ Done   |
 | 22       | Comparing Names                   | ✅ Done   |
-| 23       | Troubleshooting Car Issues        | In Progress |
+| 23       | Troubleshooting Car Issues        | ✅ Done   |
+| 24       | Anagram Checker                   | In Progress |
+
 
 
 ## License
