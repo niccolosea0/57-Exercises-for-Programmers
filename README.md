@@ -49,7 +49,10 @@ The goal of this repository is to:
 | 21       | Numbers to Names                  | ✅ Done   |
 | 22       | Comparing Names                   | ✅ Done   |
 | 23       | Troubleshooting Car Issues        | ✅ Done   |
-| 24       | Anagram Checker                   | In Progress |
+| 24       | Anagram Checker                   | ✅ Done   |
+| 25       | Password Strength Indicator       | ✅ Done   |
+| 26       | Months to Pay Off a Credit Card   | In Progress |
+
 
 
 
