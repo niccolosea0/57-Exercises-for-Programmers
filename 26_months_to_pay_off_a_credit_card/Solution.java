@@ -22,17 +22,14 @@ public class Solution {
     public static int calculatePayOff(int b, int apr, int p) {
 
         //this is the daily rate
-        double aprRate = apr / 100;
+        double aprRate = apr / 100.;
         double i = aprRate / 365.;
 
         double dividend = Math.log(1 + ((double)b / p) * (1 - Math.pow(1 + i, 30)));
-        System.out.println(dividend);
 
         double division = Math.log(1 + i);
-        System.out.println(division);
 
         double n = (-1.0 / 30.0) * (dividend / division);
-        System.out.println(n);
 
         return (int) Math.ceil(n);
     }
