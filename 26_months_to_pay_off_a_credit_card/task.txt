@@ -11,7 +11,7 @@ Exercise26: Months to Pay Off a Credit Card
     card and the APR of the card. The program should then
     return the number of months needed.
     
-    The formula for this is
+    Th formula for this is
         n = (−1/30) * ((log(1 + b/p(1 - (1 + i)^30))) / log(1 + i))
     
     where
