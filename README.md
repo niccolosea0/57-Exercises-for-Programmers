@@ -51,7 +51,11 @@ The goal of this repository is to:
 | 23       | Troubleshooting Car Issues        | ✅ Done   |
 | 24       | Anagram Checker                   | ✅ Done   |
 | 25       | Password Strength Indicator       | ✅ Done   |
-| 26       | Months to Pay Off a Credit Card   | In Progress |
+| 26       | Months to Pay Off a Credit Card   | ✅ Done   |
+| 27       | Validating Inputs                 | In Progress |
+
+.[] adad
+
 
 
 
