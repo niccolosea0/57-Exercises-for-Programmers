@@ -7,7 +7,10 @@ public class ValidatingInputs {
 
         String firstName = getName("Enter the first name: ");
         String lastName = getName("Enter the last name: ");
-        String zipCode = getZipCode("Enter ZIP code: ");
+        String employeeId = getEmployeeId("Enter the Employee ID: ");
+        int zipCode = getZipCode("Enter ZIP code: ");
+
+        System.out.printf("Name: %s\nlastName: %s\nemployeeId: %s\nZipCode: %d\n", firstName, lastName, employeeId, zipCode);
              
     }
 
@@ -25,7 +28,7 @@ public class ValidatingInputs {
         return input;
     }
 
-    public static String getZipCode(String prompt) {
+    public static String getEmployeeId(String prompt) {
 
         System.out.print(prompt);
         String input = scanner.nextLine();
@@ -37,14 +40,29 @@ public class ValidatingInputs {
 
             if (!(firstPart.matches("[a-zA-Z]+") && secondPart.matches("[0-9]+"))) {
                 System.out.println("ZIP code is invalid");
-                return getZipCode(prompt);
+                return getEmployeeId(prompt);
             }
         } catch (Exception e) {
             System.out.println("ZIP code is invalid");
-            return getZipCode(prompt);
+            return getEmployeeId(prompt);
         }
 
         return input;
+    }
+
+    public static int getZipCode(String prompt) {
+        System.out.print(prompt);
+        String input = scanner.nextLine();
+        int zipCode = 0;
+
+        try {
+            zipCode = Integer.parseInt(input);
+        } catch (Exception e) {
+            System.out.println("Invalid input, zip code must be numberic");
+            return getZipCode(prompt);
+        }
+
+        return zipCode;
     }
 }
 
