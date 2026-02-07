@@ -52,11 +52,8 @@ The goal of this repository is to:
 | 24       | Anagram Checker                   | ✅ Done   |
 | 25       | Password Strength Indicator       | ✅ Done   |
 | 26       | Months to Pay Off a Credit Card   | ✅ Done   |
-| 27       | Validating Inputs                 | In Progress |
-
-.[] adad
-
-
+| 27       | Validating Inputs                 | ✅ Done   |
+| 28       | Adding Numbers                    | In Progress |
 
 
 
