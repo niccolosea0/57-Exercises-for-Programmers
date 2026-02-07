@@ -40,7 +40,8 @@ public class ValidatingInputs {
                 return getZipCode(prompt);
             }
         } catch (Exception e) {
-            e.printStackTrace();
+            System.out.println("ZIP code is invalid");
+            return getZipCode(prompt);
         }
 
         return input;
