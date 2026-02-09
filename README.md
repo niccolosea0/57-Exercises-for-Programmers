@@ -54,7 +54,9 @@ The goal of this repository is to:
 | 26       | Months to Pay Off a Credit Card   | ✅ Done   |
 | 27       | Validating Inputs                 | ✅ Done   |
 | 28       | Adding Numbers                    | ✅ Done   |
-| 29       | Handling Bad Input                | In Progress|
+| 29       | Handling Bad Input                | ✅ Done   |
+| 30       | Multiplication Table              | In Progress|
+
 
 
 
