@@ -24,6 +24,7 @@ public class AddingNumbers {
         while (!scanner.hasNextInt()) {
              System.out.println("Please enter valid integer!");
              scanner.next();
+             System.out.print(prompt);
         }
 
         return scanner.nextInt();
