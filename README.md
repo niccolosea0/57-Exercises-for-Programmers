@@ -56,7 +56,8 @@ The goal of this repository is to:
 | 28       | Adding Numbers                    | ✅ Done   |
 | 29       | Handling Bad Input                | ✅ Done   |
 | 30       | Multiplication Table              | ✅ Done   |
-| 31       | karvonen Heart Rate               | In Progress|
+| 31       | Karvonen Heart Rate               | ✅ Done   |
+| 32       | Guess the Number Game             | In Progress|
 
 
 
