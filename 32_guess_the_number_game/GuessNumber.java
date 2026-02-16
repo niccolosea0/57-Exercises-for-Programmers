@@ -1,28 +1,34 @@
 import java.util.Random;
 import java.util.Scanner;
 
-
 public class GuessNumber {
 
     public static final Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
 
-        System.out.println("Let's play Guess the Number.");
-        int level = getLevel("pick a difficulty level (1, 2, or 3): ");
-        int randomNumber = 0;
+        boolean flag = true;
 
-        switch (level) {
-            case 1 -> randomNumber = getRandom(1, 10);
-            case 2 -> randomNumber = getRandom(1, 100);
-            case 3 -> randomNumber = getRandom(1, 1000);
-            default -> System.out.println("Invalid level");
+        while (flag) {
 
+            System.out.println("Let's play Guess the Number.");
+            int randomNumber = getLevel(); 
+
+            System.out.println(randomNumber);
+            play(randomNumber);
+
+            System.out.print("Play again? ");
+            flag = playAgain();
         }
 
-        System.out.println(randomNumber);
+        System.out.println("Goodbye!");
+        
+    }
+
+    public static void  play(int randomNumber) {
+
         System.out.print("I have my number, What's your guess? ");
-        int guess = scanner.nextInt();
+        int guess = getGuess();
 
         // Count number of guesses
         int count = 1;
@@ -30,11 +36,12 @@ public class GuessNumber {
         while (guess != randomNumber) {
             if (guess < randomNumber) {
                 System.out.print("Too low, Guess again: ");
-                guess = scanner.nextInt();
+                guess = getGuess();
             } else if (guess > randomNumber) {
                 System.out.print("Too high, Guess again: ");
-                guess = scanner.nextInt();
+                guess = getGuess();
             }
+
             count++;
         }
 
@@ -42,19 +49,72 @@ public class GuessNumber {
 
     }
 
+    public static boolean playAgain() {
+
+        boolean result = true;
+        String answer = scanner.nextLine().trim().toLowerCase();
+
+        if (answer.equals("n") || answer.equals("no")) {
+            result = false;
+        } else if (answer.equals("y") || answer.equals("yes")) {
+            result = true;
+        } else {
+            System.out.println("Could not understand, please answer yes or no");
+            result = playAgain();
+        }
+
+        return result;
+    }
+        
+
+    public static int getGuess() {
+        // If guess is nont-numberic assign gues with -1, to count this as a wrong guess
+        String input = scanner.nextLine(); 
+
+        try {
+            return Integer.parseInt(input);
+        } catch (NumberFormatException e) {
+            System.out.println("Guess is non-numeric, I will count it as too low!");
+            return -1;
+        }
+
+    }
+
+    // Method to get random number in range
     public static int getRandom(int min, int max) {
 
         Random r = new Random();
         return (r.nextInt(max - min + 1) + min);
     }
 
-    public static int getLevel(String prompt) {
+    // Method to getNumber
+    public static int getNumber(String prompt) {
         System.out.print(prompt);
-        while (!scanner.hasNextInt()) {
-            scanner.next();
-            System.out.print(prompt);
+        String input = scanner.nextLine();
+        try {
+            return Integer.parseInt(input);
+        } catch (NumberFormatException e) {
+            System.out.println("Invalid number");
+            return getNumber(prompt);
         }
+    }
 
-        return scanner.nextInt();
+    // Method to get level, and random number
+    public static int getLevel() {
+
+        int level = getNumber("pick a difficulty level (1, 2, or 3): ");
+        int randomNumber = 0;
+
+
+        switch (level) {
+            case 1 -> randomNumber = getRandom(1, 10);
+            case 2 -> randomNumber = getRandom(1, 100);
+            case 3 -> randomNumber = getRandom(1, 1000);
+            default -> {
+                System.out.println("Invalid level");
+                randomNumber = getLevel();
+            }
+        }
+        return randomNumber;
     }
 }
