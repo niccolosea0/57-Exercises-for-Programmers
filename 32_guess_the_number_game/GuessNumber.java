@@ -19,7 +19,26 @@ public class GuessNumber {
             default -> System.out.println("Invalid level");
 
         }
+
         System.out.println(randomNumber);
+        System.out.print("I have my number, What's your guess? ");
+        int guess = scanner.nextInt();
+
+        // Count number of guesses
+        int count = 1;
+
+        while (guess != randomNumber) {
+            if (guess < randomNumber) {
+                System.out.print("Too low, Guess again: ");
+                guess = scanner.nextInt();
+            } else if (guess > randomNumber) {
+                System.out.print("Too high, Guess again: ");
+                guess = scanner.nextInt();
+            }
+            count++;
+        }
+
+        System.out.println("You got it in " + count + " guesses!");
 
     }
 
