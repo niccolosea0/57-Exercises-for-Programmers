@@ -14,7 +14,6 @@ public class GuessNumber {
             System.out.println("Let's play Guess the Number.");
             int randomNumber = getLevel(); 
 
-            System.out.println(randomNumber);
             play(randomNumber);
 
             System.out.print("Play again? ");
@@ -45,8 +44,13 @@ public class GuessNumber {
             count++;
         }
 
-        System.out.println("You got it in " + count + " guesses!");
+        if (count == 1) {
+            System.out.println("You got it in " + count + " guess!");
+        } else {
+            System.out.println("You got it in " + count + " guesses!");
+        }
 
+        getFeedback(count);
     }
 
     public static boolean playAgain() {
@@ -116,5 +120,17 @@ public class GuessNumber {
             }
         }
         return randomNumber;
+    }
+
+    public static void getFeedback(int count) {
+        if (count == 1) {
+            System.out.println("You are a mind reader!");
+        } else if (count >= 2 && count <= 3) {
+            System.out.println("Most impressive");
+        } else if (count >= 4 && count <= 6) {
+            System.out.println("You can do better than that");
+        } else if (count >= 7) {
+            System.out.println("Better luck next time");
+        }
     }
 }
