@@ -58,7 +58,8 @@ The goal of this repository is to:
 | 30       | Multiplication Table              | ✅ Done   |
 | 31       | Karvonen Heart Rate               | ✅ Done   |
 | 32       | Guess the Number Game             | ✅ Done   |
-| 33       | Magic 8 Ball                      | In Progress|
+| 33       | Magic 8 Ball                      | ✅ Done   |
+| 34       | Employee List Removal             | In Progress|
 
 
 ## License
