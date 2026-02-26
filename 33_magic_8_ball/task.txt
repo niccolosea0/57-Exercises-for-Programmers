@@ -1,0 +1,23 @@
+Exercise: 33 Magic 8 Ball
+
+    Arrays are great for storing possible responses from a pro-
+    gram. If you combine that with a random number generator,
+    you can pick a random entry from this list, which works
+    great for games.
+    Create a Magic 8 Ball game that prompts for a question and
+    then displays either “Yes,” “No,” “Maybe,” or “Ask again
+    later.”
+    
+    Example Output
+        What's your question?
+        Ask again later.
+        Will I be rich and famous?
+    
+    Constraint
+        • The value should be chosen randomly using a pseudo
+        random number generator. Store the possible choices
+        in a list and select one at random.
+    
+    Challenges
+        • Implement this as a GUI application.
+        • If available, use native
