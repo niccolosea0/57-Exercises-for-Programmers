@@ -31,11 +31,8 @@ public class Challange {
         // Update employee's number
         employeeNum = list.size();
 
-        // Print number of employees
-        System.out.println("\nThere are " + employeeNum + " employees:");
-
-        // Print employees
-        printEmployeeList(list);
+        // Write into the file
+        writeIntoFile(list);
     }
 
     // Method that creates a Employee List and returns it
@@ -61,6 +58,25 @@ public class Challange {
         }
     }
 
+    // Write content into the file
+    public static void writeIntoFile(List<String> employeeList) {
+
+        List<String> lines = new ArrayList<>();
+        lines.add("There are " + employeeList.size() + " employees:\n");
+        for (String elem : employeeList) {
+            lines.add(elem);
+        }
+
+        try {
+            // Write into the employee.txt file
+            Files.write(Paths.get("employee.txt"), lines);
+            System.out.println("Successfully wrote to the file.");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    // Method to remove employee
     public static void removeEmployee(List<String> employeeList) {
         // Get employee name, needs to be removed
         System.out.print("\nEnter an employee name to remove: ");
