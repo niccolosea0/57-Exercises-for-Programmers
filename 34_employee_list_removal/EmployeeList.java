@@ -15,6 +15,7 @@ public class EmployeeList {
         System.out.println("There are " + employeeNum + " employees:");
 
         // Print employee's names
+        printEmployeeList(list);
 
 
         // Enter employe name which we want to remove
@@ -35,6 +36,11 @@ public class EmployeeList {
         employeeList.add("Jeremy Goodwin");
 
         return employeeList;
+    }
 
+    public static void printEmployeeList(List<String> employeeList) {
+        for (String name : employeeList) {
+            System.out.println("\t" + name);
+        }
     }
 }
