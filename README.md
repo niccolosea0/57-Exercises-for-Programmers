@@ -59,7 +59,8 @@ The goal of this repository is to:
 | 31       | Karvonen Heart Rate               | ✅ Done   |
 | 32       | Guess the Number Game             | ✅ Done   |
 | 33       | Magic 8 Ball                      | ✅ Done   |
-| 34       | Employee List Removal             | In Progress|
+| 34       | Employee List Removal             | ✅ Done   |
+| 35       | Picking a Winner                  | In Progress|
 
 
 ## License
