@@ -60,7 +60,9 @@ The goal of this repository is to:
 | 32       | Guess the Number Game             | ✅ Done   |
 | 33       | Magic 8 Ball                      | ✅ Done   |
 | 34       | Employee List Removal             | ✅ Done   |
-| 35       | Picking a Winner                  | In Progress|
+| 35       | Picking a Winner                  | ✅ Done   |
+| 36       | Computing Statistics              | In Progress|
+
 
 
 ## License
