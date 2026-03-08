@@ -61,7 +61,9 @@ The goal of this repository is to:
 | 33       | Magic 8 Ball                      | ✅ Done   |
 | 34       | Employee List Removal             | ✅ Done   |
 | 35       | Picking a Winner                  | ✅ Done   |
-| 36       | Computing Statistics              | In Progress|
+| 36       | Computing Statistics              | ✅ Done   |
+| 37       | Password Generator                | In Progress|
+
 
 
 
