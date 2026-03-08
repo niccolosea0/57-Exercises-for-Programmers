@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.io.*;
 import java.util.List;
 import java.util.ArrayList;
 
@@ -10,6 +11,10 @@ public class ComputeStatistics {
 
         List<Integer> list = new ArrayList<>();
         addNumbersInList(list);
+        System.out.println("Numbers from file are: ");
+        for (Integer num : list) {
+            System.out.println("\t" + num);
+        }
         
         double standDev = standardDeviation(list);
         double mean = mean(list);
@@ -17,7 +22,7 @@ public class ComputeStatistics {
         int min = min(list);
 
 
-        System.out.printf("Standard Deviation: %.2f\n", standDev);
+        System.out.printf("\nStandard Deviation: %.2f\n", standDev);
         System.out.println("Mean: " + mean);
         System.out.println("Max: " + max);
         System.out.println("Min: " + min);
@@ -25,7 +30,8 @@ public class ComputeStatistics {
         
     }
 
-    private static void addNumbersInList(List<Integer> numList) {
+// numbers from terminal
+/*    private static void addNumbersInList(List<Integer> numList) {
         while (true) {
             System.out.print("Enter a number: ");
             String number = scanner.nextLine();
@@ -39,6 +45,43 @@ public class ComputeStatistics {
             }
         }
     }
+*/
+
+    private static void addNumbersInList(List<Integer> numList) {
+
+        BufferedReader rd = openFile("Enter a filename: ");
+
+        try {
+            while (true) {
+                String line = rd.readLine();
+                if (line == null)
+                    break;
+                numList.add(Integer.parseInt(line));
+            }
+
+            rd.close();
+        } catch (IOException ex) {
+            ex.printStackTrace();
+        }
+
+    }
+
+    private static BufferedReader openFile(String prompt) {
+        BufferedReader reader = null;
+
+        while (reader == null) {
+            try {
+                System.out.print(prompt);
+                String filename = scanner.nextLine();
+                reader = new BufferedReader(new FileReader(filename));
+            } catch (IOException e) {
+                System.out.println("Enter valid filename dear friend!");
+            }
+        }
+
+        return reader;
+    }
+
 
     private static double standardDeviation(List<Integer> numList) {
 
