@@ -62,7 +62,8 @@ The goal of this repository is to:
 | 34       | Employee List Removal             | ✅ Done   |
 | 35       | Picking a Winner                  | ✅ Done   |
 | 36       | Computing Statistics              | ✅ Done   |
-| 37       | Password Generator                | In Progress|
+| 37       | Password Generator                | ✅ Done   |
+| 38       | Filtering Values                  | In Progress|
 
 
 
