@@ -73,26 +73,6 @@ public class PasswordGenerator {
         return password;
     }
 
-    private static String getRandomLetters(Random random, String str, int size) {
-
-        // Return letters
-        return getRandomCharacters(random, str, size);
-
-    }
-    private static String getRandomNumbers(Random random, String str, int size) {
-
-        // Return numbers
-        return getRandomCharacters(random, str, size);
-
-    }
-
-    private static String getRandomSymbols(Random random, String str, int size) {
-
-        // Return symbols
-        return getRandomCharacters(random, str, size);
-
-    }
-    
     private static String getRandomCharacters(Random random, String str, int size) {
 
         String password = "";
