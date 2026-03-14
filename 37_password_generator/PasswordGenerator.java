@@ -20,10 +20,8 @@ public class PasswordGenerator {
          int specialCount = getNumber("How mant special characters? ");
 
          String password = getRandomPassword(rand, passLength, numCount, specialCount);
+
          String randomizedPassword = shufflePassword(rand, password, passLength);
-
-
-         System.out.println("Your password: " + password);
          System.out.println("Your randomized password: " + randomizedPassword);
     }
 
@@ -35,12 +33,12 @@ public class PasswordGenerator {
         for (int i = 0; i < passLength; i++) {
 
             list.add(password.charAt(i));
+            
         }
-
 
         String randomPassword = "";
 
-        for (int i = 0; i < list.size(); i++) {
+        while(list.size() > 0) {
             
             // get random number from pass length
             int randIndex = random.nextInt(list.size());
