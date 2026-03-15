@@ -20,9 +20,26 @@ public class PasswordGenerator {
          int specialCount = getNumber("How mant special characters? ");
 
          String password = getRandomPassword(rand, passLength, numCount, specialCount);
+         String password2 = getRandomPassword(rand, passLength, numCount, specialCount);
+         String password3 = getRandomPassword(rand, passLength, numCount, specialCount);
 
          String randomizedPassword = shufflePassword(rand, password, passLength);
-         System.out.println("Your randomized password: " + randomizedPassword);
+         String randomizedPassword2 = shufflePassword(rand, password2, passLength);
+         String randomizedPassword3 = shufflePassword(rand, password3, passLength);
+
+         System.out.println("You have 3 options: ");
+         System.out.println("1: " + randomizedPassword);
+         System.out.println("2: " + randomizedPassword2);
+         System.out.println("3: " + randomizedPassword3);
+
+         int option = getNumber("Choose (1, 2, or 3): ");
+         switch (option) {
+             case 1 -> System.out.println("Your option: " + randomizedPassword); 
+             case 2 -> System.out.println("Your option: " + randomizedPassword2); 
+             case 3 -> System.out.println("Your option: " + randomizedPassword3); 
+             default -> System.out.println("Invalid option");
+         }
+
     }
 
     private static String shufflePassword(Random random, String password, int passLength) {
