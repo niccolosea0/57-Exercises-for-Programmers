@@ -21,7 +21,8 @@ Constraints
     • Use lists to store the characters you’ll use to generate
     the passwords.
     • Add some randomness to the password generation.
-    Challenges
+
+Challenges
     • Randomly convert vowels to numbers, such as 3 for E
     and 4 for A.
     • Have the program present a few options rather than a
