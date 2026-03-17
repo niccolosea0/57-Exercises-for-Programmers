@@ -63,8 +63,8 @@ The goal of this repository is to:
 | 35       | Picking a Winner                  | ✅ Done   |
 | 36       | Computing Statistics              | ✅ Done   |
 | 37       | Password Generator                | ✅ Done   |
-| 38       | Filtering Values                  | In Progress|
-
+| 38       | Filtering Values                  | ✅ Done   |
+| 39       | Sorting Records                   | In Progress|
 
 
 
