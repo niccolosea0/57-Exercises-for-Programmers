@@ -51,6 +51,7 @@ public class SortRecords {
 
             for (int j = 0; j < COLUMNS_NUM; j++) {
 
+                // Check for null values
                 if (j < columnStr.length) {
                     lineArray[i][j] = columnStr[j];
                 } else {
