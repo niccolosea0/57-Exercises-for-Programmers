@@ -1,0 +1,16 @@
+Exercise 39: Sorting Records
+
+When you’re looking at results, you’ll want to be able to sort
+them so you can find what you’re looking for quickly or do
+some quick visual comparisons.
+
+Given the following data set
+
+Constraint
+• Implement the data using a list of maps.
+
+Challenges
+• Prompt for how the records should be sorted. Allow
+sorting by separation date, position, or last name.
+• Use a database such as MySQL, or a key-value store
+such as Redis, to store the employ
