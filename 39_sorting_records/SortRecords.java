@@ -13,24 +13,56 @@ public class SortRecords {
 
     public static void main(String[] args) {
 
-
-        List<String> employeeList = new ArrayList<>();
-
-        Map<String, String> employeeMap = new HashMap<>();
-
         BufferedReader fileReader = openFile("Please enter a filename: ");
 
         List<String> linesFromFile = readFile(fileReader);
 
         String[][] linesArray = splitLinesToArray(linesFromFile);
 
-        for (int i = 0; i < linesArray.length; i++) {
-            for (int j = 0; j < COLUMNS_NUM; j++) {
-                System.out.print(linesArray[i][j] + " ");
-            }
-            System.out.println();
+        List<Map<String, String>> employeeList = buildEmployeeList(linesArray);
+
+        employeeList.sort((e1, e2) -> {
+
+            String lastName1 = e1.get("lastName");
+            String lastName2 = e2.get("lastName");
+
+            return lastName1.compareTo(lastName2);
+
+        });
+
+
+        System.out.printf("%-20s | %-20s | %-15s%n", "Name", "Position", "Separation Date");
+
+        System.out.println("---------------------|----------------------|----------------");
+
+        for (Map<String, String> employee : employeeList) {
+
+            String name = employee.get("firstName") +  " " + employee.get("lastName");
+            String position = employee.get("position");
+            String separationDate = employee.get("separationDate");
+
+            System.out.printf("%-20s | %-20s | %-15s%n", name, position, separationDate);
+
         }
-         
+    }
+
+    private static List<Map<String, String>> buildEmployeeList(String[][] lines) {
+
+        List<Map<String, String>> employees = new ArrayList<>();
+
+
+        for (int i = 0; i < lines.length; i++) {
+            Map<String, String> employee = new HashMap<>();
+
+            employee.put("firstName", lines[i][0]);
+            employee.put("lastName", lines[i][1]);
+            employee.put("position", lines[i][2]);
+            employee.put("separationDate", lines[i][3]);
+
+            employees.add(employee);
+        }
+
+        return employees;
     }
 
     private static String[][] splitLinesToArray(List<String> lines) {
