@@ -64,7 +64,8 @@ The goal of this repository is to:
 | 36       | Computing Statistics              | ✅ Done   |
 | 37       | Password Generator                | ✅ Done   |
 | 38       | Filtering Values                  | ✅ Done   |
-| 39       | Sorting Records                   | In Progress|
+| 39       | Sorting Records                   | ✅ Done   |
+| 40       | Filtering Records                 | In Progress|
 
 
 
